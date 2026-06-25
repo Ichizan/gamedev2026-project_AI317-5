@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP410844 - Computer Game Development</title>
+    <!-- นำเข้าฟอนต์ 8-bit และฟอนต์ภาษาไทย -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Kanit', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+            /* พื้นหลังลายตารางแนวย้อนยุค */
+            background-image: 
+                linear-gradient(#1a1a1a 2px, transparent 2px),
+                linear-gradient(90deg, #1a1a1a 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #0b0b0b;
+            /* กรอบสไตล์ 8-bit */
+            border: 6px solid #ffffff;
+            box-shadow: 10px 10px 0px #e52521, -10px -10px 0px #049cd8;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: #fce803;
+            font-size: 20px;
+            line-height: 1.8;
+            text-shadow: 3px 3px 0 #ff003c;
+            margin-bottom: 10px;
+        }
+
+        .student-info {
+            color: #00ffcc;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 0 #005544;
+        }
+
+        .level-select {
+            font-family: 'Press Start 2P', cursive;
+            color: #ffffff;
+            font-size: 14px;
+            margin-bottom: 20px;
+            animation: blink 1s step-end infinite; /* เอฟเฟกต์กระพริบ */
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .lab-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+        .lab-btn {
+            font-family: 'Press Start 2P', cursive;
+            display: block;
+            background-color: #000;
+            color: #39ff14;
+            border: 4px solid #39ff14;
+            padding: 18px;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            box-shadow: 6px 6px 0px #005500;
+            transition: all 0.1s;
+            cursor: pointer;
+        }
+
+        .lab-btn:hover {
+            background-color: #39ff14;
+            color: #000;
+            box-shadow: 6px 6px 0px #ffffff;
+            transform: translate(-2px, -2px); /* เอฟเฟกต์ตอนเมาส์ชี้ */
+        }
+
+        .lab-btn:active {
+            box-shadow: 0px 0px 0px #ffffff;
+            transform: translate(4px, 4px); /* เอฟเฟกต์ตอนกดปุ่ม */
+        }
+
+        .lab-btn.locked {
+            color: #555555;
+            border-color: #555555;
+            box-shadow: 6px 6px 0px #222222;
+            cursor: not-allowed;
+        }
+
+        .lab-btn.locked:hover {
+            background-color: #000;
+            transform: none;
+        }
+
+        .pixel-art {
+            margin-top: 30px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CP410844<br><br>COMPUTER GAME DEV</h1>
+        <p class="student-info">
+            นาย ธนกร เวียงสิมา<br>
+            รหัส 673380317-5
+        </p>
+
+        <p class="level-select">- SELECT LEVEL -</p>
+
+        <div class="lab-grid">
+            <!-- Lab ที่มีไฟล์เกมในโฟลเดอร์เดียวกันแล้ว ให้ใส่ลิงก์ที่ href -->
+            <a href="lab01.html" class="lab-btn">STAGE 1 : LAB 01</a>
+            <a href="lab02.html" class="lab-btn">STAGE 2 : LAB 02</a>
+            
+            <!-- Lab ที่ยังไม่เปิดให้เล่น หรือยังทำไม่เสร็จ ให้ใส่คลาส locked -->
+            <a href="#" class="lab-btn locked">STAGE 3 : LOCKED</a>
+            <a href="#" class="lab-btn locked">STAGE 4 : LOCKED</a>
+            <a href="#" class="lab-btn locked">STAGE 5 : LOCKED</a>
+            <a href="#" class="lab-btn locked">STAGE 6 : LOCKED</a>
+        </div>
+
+        <div class="pixel-art">INSERT COIN TO PLAY</div>
+    </div>
+
+</body>
+</html>
